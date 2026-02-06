@@ -11,10 +11,15 @@
             <h2>Login</h2>
             <form id="loginForm">
                 <input type="email" id="username" placeholder="Username" required />
-                <input type="password" id="password" placeholder="Password" required />
+
+                <div class="password-box">
+                    <input type="password" id="password" placeholder="Enter password">
+                    <button type="button" class="toggle" onclick="togglePassword(this)">👁️</button>
+                </div>
+
                 <button type="submit">Login</button>
             </form>
-            <p id="errorMessage"></p>
+
         </div>
 
         <script src="script.js"></script>
