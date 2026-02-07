@@ -8,18 +8,29 @@
     </head>
     <body>
         <div class="login-container">
-            <h2>Login</h2>
+            <h2 id="formTitle">Login</h2>
             <form id="loginForm">
-                <input type="email" id="username" placeholder="Username" required />
+                <input type="email" id="username" placeholder="Email" required />
 
                 <div class="password-box">
-                    <input type="password" id="password" placeholder="Enter password">
+                    <input 
+                        type="password" 
+                        id="password" 
+                        placeholder="Enter password (min. 6 characters)" 
+                        required 
+                        minlength="6"
+                    >
                     <button type="button" class="toggle" onclick="togglePassword(this)">👁️</button>
                 </div>
+                <span class="helper-text">Password must be at least 6 characters.</span>
 
-                <button type="submit">Login</button>
+                <button type="submit" id="submitBtn">Login</button>
             </form>
-
+            
+            <p style="margin-top: 15px; font-size: 14px;">
+                <span id="toggleText">Don't have an account?</span> 
+                <a href="#" id="switchMode" style="color: #007BFF; text-decoration: none; font-weight: bold;">Sign Up</a>
+            </p>
         </div>
 
         <script src="script.js"></script>

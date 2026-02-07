@@ -81,3 +81,17 @@ button[type="submit"] {
     border-radius: 4px;
     cursor: pointer;
 }
+
+/* Highlights the border in red if the user has typed something but it's too short */
+input:invalid:not(:placeholder-shown) {
+    border-color: #ff4d4d;
+}
+
+/* Optional: Add a small helper text style */
+.helper-text {
+    font-size: 11px;
+    color: #666;
+    text-align: left;
+    margin-top: -8px;
+    margin-bottom: 10px;
+}
