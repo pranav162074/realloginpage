@@ -35,7 +35,7 @@ loginForm.addEventListener('submit', async (e) => {
     const endpoint = isLoginMode ? '/api/login' : '/api/register';
     
     try {
-        const response = await fetch(`http://localhost:5000${endpoint}`, {
+        const response = await fetch(`https://realloginpage-production.up.railway.app${endpoint}`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ email, password })
