@@ -4,7 +4,7 @@ const submitBtn = document.getElementById('submitBtn');
 const switchMode = document.getElementById('switchMode');
 const toggleText = document.getElementById('toggleText');
 
-let isLoginMode = true;
+let isLoginMode = false; // Start in Register mode
 
 // Toggle between Login and Register
 switchMode.addEventListener('click', (e) => {
@@ -71,3 +71,5 @@ function togglePassword(el) {
         el.textContent = "👁️";
     }
 }
+
+switchMode.click(); // Initialize to Register mode on page load
